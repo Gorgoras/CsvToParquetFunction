@@ -1,0 +1,8 @@
+azure-functions
+azure-identity
+azure-keyvault-secrets
+pandas
+azure-storage-blob
+requests
+pyarrow
+azure-cosmosdb-table
