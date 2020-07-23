@@ -59,7 +59,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             for m in months:
                 df_loop = df.loc[(df['year']==y) & (df['month']==m)]
                 df_upload = df_loop.drop(axis=1, columns=['year', 'month'])
-                nombre_archivo = "strutured/Parquet/PI_Genelba_DA/{}/{}/{}.snappy.parquet".format(y, m, csv_name)
+                nombre_archivo = "strutured/Parquet/PI_Genelba_DA/{}/{}/PI_Genelba_DA_timestamp/{}.snappy.parquet".format(y, m, csv_name)
                 blob_client = blob_service_client.get_blob_client(container=fileSystem, blob=nombre_archivo)
                 subirDataframe(df_upload, blob_client)
 
